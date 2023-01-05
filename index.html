@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+
+    <style>
+      .spinner-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        font-family: "manrope", sans-serif;
+      }
+
+      .spinner-loading {
+        -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+        animation: sk-scaleout 1s infinite ease-in-out;
+        background-color: #0544b8;
+        border-radius: 100%;
+        height: 6em;
+        width: 6em;
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="spinner" class="spinner-container">
+        <h3>Noibi Abdulrasaq</h3>
+        <div id="loading" class="spinner-loading"></div>
+      </div>
+    </div>
+    <div id="overlays"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

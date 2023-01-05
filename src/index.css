@@ -1,0 +1,112 @@
+/* manrope */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap");
+
+:root {
+  --primaryMain: #f9a826;
+  --primaryDark: #f99f0a;
+  --primaryDeep: #f98f0a;
+  --primaryLight: #f9b33d;
+  --primaryLightest: #f9c66d;
+  --textWhite: #ffffff;
+  --background: #f5f5f5;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Manrope", sans-serif;
+    background-color: var(--background);
+  }
+
+  code {
+    font-family: "Manrope", sans-serif;
+  }
+
+  .contents__holder::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  .contents__holder::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .contents__holder::-webkit-scrollbar-thumb {
+    background: #49494b7a;
+    border-radius: 5px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-3 font-bold text-base rounded-lg box-border;
+  }
+
+  .hamburger-line {
+    @apply w-6 h-[2px] bg-primaryMain dark:bg-white absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .btnLong {
+    @apply w-[400px];
+  }
+  .btnShort {
+    @apply w-[140px];
+  }
+
+  .btnPrimary {
+    @apply bg-primaryMain text-textWhite;
+  }
+
+  .btnPrimary:hover {
+    @apply bg-primaryDark;
+  }
+
+  .btnPrimary:focus {
+    @apply bg-primaryDeep;
+  }
+
+  .btnPrimary:disabled {
+    @apply bg-primaryLight;
+  }
+
+  .btnSecondary {
+    @apply bg-textWhite text-primaryMain border border-primaryMain;
+  }
+
+  .btnSecondary:hover {
+    @apply bg-primaryLightest border-primaryDark;
+  }
+
+  .btnSecondary:focus {
+    @apply bg-primaryDeep text-textWhite;
+  }
+
+  .btnSecondary:disabled {
+    @apply bg-textWhite text-primaryLight border-primaryLight;
+  }
+}
