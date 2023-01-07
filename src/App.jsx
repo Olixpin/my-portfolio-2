@@ -1,11 +1,12 @@
-import { Header } from "./Layouts";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Header, Hero } from "./Layouts";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = ({}) => {
   return (
     <Router>
-      {/* basename={process.env.PUBLIC_URL} */}
       <Header />
+      <Hero />
+      <Routes>{/* <Route path="/" element={<Home />} /> */}</Routes>
     </Router>
   );
 };

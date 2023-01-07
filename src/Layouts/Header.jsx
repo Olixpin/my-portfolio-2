@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ComponentLayoutSize from "../components/UI/ComponentLayoutSize";
 import logo from "../assets/olixpin.svg";
 import logoWhite from "../assets/olixpin-white.svg";
@@ -8,39 +8,67 @@ import Theme from "../components/UI/Theme";
 import { useGlobalContext } from "../context/context";
 import Modal from "../components/UI/Modal";
 import Menus from "../components/UI/Menus";
+import { Instagram, LinkedIn, Twitter } from "@mui/icons-material";
+import socialMedia from "../components/UI/socialMedia";
 
 const Header = () => {
   const { theme, isModalOpen } = useGlobalContext();
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(!open);
+  };
+
   return (
-    <header className="dark:bg-backgroundDark2">
-      <ComponentLayoutSize>
-        <div className="py-5 flex justify-between items-center ">
-          <Link to="/">
-            {" "}
-            {theme === "dark" ? (
-              <img
-                src={logo}
-                alt="
+    <header className=" relative px-10">
+      <div className="py-5 flex justify-between items-center ">
+        <Link to="/">
+          {theme === "dark" ? (
+            <img
+              src={logo}
+              alt="
                 Olixpin"
-                className="w-20"
-              />
-            ) : (
-              <img src={logoWhite} alt="Olixpin" className="w-20" />
-            )}
-          </Link>
-          <div className="flex gap-4">
-            <Theme />
-            <Hamburger />
-          </div>
+              className="w-20"
+            />
+          ) : (
+            <img src={logoWhite} alt="Olixpin" className="w-20" />
+          )}
+        </Link>
+        <div className="flex gap-4 z-[70]">
+          <Theme open={open} />
+          <Hamburger open={open} handleOpen={handleOpen} />
         </div>
-        {isModalOpen && (
-          <Modal>
-            <div className="p-5 rounded-md ">
-              <Menus />
-            </div>
-          </Modal>
-        )}
-      </ComponentLayoutSize>
+      </div>
+
+      {isModalOpen && (
+        <Modal>
+          <div className="p-5 rounded-md flex flex-col items-start">
+            <Menus />
+          </div>
+          <div
+            id="social-media"
+            className="flex gap-4 items-center justify-start mt-2 p-5 text-xl text-gray-500 dark:text-gray-300 dark:border-gray-700 text-backgroundDark2 dark:text-white"
+          >
+            <code className="font-medium max-[425px]:hidden">
+              Social Media:
+            </code>
+            {socialMedia.map((social) => {
+              const { id, icon, url } = social;
+              return (
+                <a
+                  key={id}
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition-all hover:text-primaryMain text-xl"
+                >
+                  {icon}
+                </a>
+              );
+            })}
+          </div>
+        </Modal>
+      )}
     </header>
   );
 };

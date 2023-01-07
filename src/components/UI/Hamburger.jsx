@@ -1,28 +1,36 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGlobalContext } from "../../context/context";
 
-const Hamburger = () => {
-  const [open, setOpen] = useState(false);
-  const { openModal, closeModal, isModalOpen } = useGlobalContext();
+const Hamburger = ({ handleOpen, open }) => {
+  const { openModal, closeModal, isModalOpen, screenWidth } =
+    useGlobalContext();
 
   return (
-    <div className={"relative"}>
+    <div className="relative">
       <button
         className="block w-10 h-10 focus:outline-none"
         onClick={() => {
-          setOpen(!open);
+          handleOpen();
           isModalOpen ? closeModal() : openModal();
         }}
       >
         <div
           className={`${
-            open ? "rotate-45 transition-all" : "-mt-1.5 transition-all"
-          } hamburger-line z-[60] transition-all`}
+            open
+              ? "rotate-45 transition-all"
+              : screenWidth > 800
+              ? "-mt-1.5 bg-white"
+              : "-mt-1.5"
+          } hamburger-line bg-primaryMain dark:bg-white z-[60] transition-all`}
         ></div>
         <div
           className={`${
-            open ? "-rotate-45 transition-all" : "mt-1.5 transition-all"
-          } hamburger-line z-[60] transition-all`}
+            open
+              ? "-rotate-45 transition-all"
+              : screenWidth > 800
+              ? "mt-1.5 bg-white"
+              : "mt-1.5"
+          } hamburger-line bg-primaryMain dark:bg-white z-[60] transition-all`}
         ></div>
       </button>
     </div>

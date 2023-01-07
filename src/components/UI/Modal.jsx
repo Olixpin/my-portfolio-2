@@ -6,8 +6,8 @@ const Backdrop = () => {
   const { closeModal } = useGlobalContext();
   return (
     <div
-      className="fixed w-full z-[50] h-screen bg-background dark:bg-backgroundDark2 -mt-20"
-      onClick={closeModal}
+      className="fixed w-full z-[50] h-screen bg-background dark:bg-backgroundDark top-0"
+      // onClick={closeModal}
     />
   );
 };

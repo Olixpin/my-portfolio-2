@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const AppContext = createContext();
 
@@ -49,6 +49,14 @@ const AppProvider = ({ children }) => {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  // track the window width
+  useEffect(() => {
+    const handleResize = () => setScreenWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const value = {
     theme,
     toggleTheme,
@@ -58,6 +66,7 @@ const AppProvider = ({ children }) => {
     isModalOpen,
     openModal,
     closeModal,
+    screenWidth,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
