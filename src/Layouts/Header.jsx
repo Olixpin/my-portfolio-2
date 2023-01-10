@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ComponentLayoutSize from "../components/UI/ComponentLayoutSize";
 import logo from "../assets/olixpin.svg";
 import logoWhite from "../assets/olixpin-white.svg";
 import { Link } from "react-router-dom";
@@ -8,11 +7,12 @@ import Theme from "../components/UI/Theme";
 import { useGlobalContext } from "../context/context";
 import Modal from "../components/UI/Modal";
 import Menus from "../components/UI/Menus";
-import { Instagram, LinkedIn, Twitter } from "@mui/icons-material";
 import socialMedia from "../components/UI/socialMedia";
 
 const Header = () => {
-  const { theme, isModalOpen } = useGlobalContext();
+  const { theme, isModalOpen, screenHeight, scrollHeight, screenWidth } =
+    useGlobalContext();
+  console.log(screenHeight, scrollHeight, screenWidth);
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
@@ -20,7 +20,13 @@ const Header = () => {
   };
 
   return (
-    <header className=" relative px-10">
+    <header
+      className={`sticky top-0 px-5 z-[100] ${
+        scrollHeight > 50 && !open
+          ? "bg-background dark:bg-backgroundDark2"
+          : "bg-transparent"
+      } transition-all duration-500 ease-in-out`}
+    >
       <div className="py-5 flex justify-between items-center ">
         <Link to="/">
           {theme === "dark" ? (

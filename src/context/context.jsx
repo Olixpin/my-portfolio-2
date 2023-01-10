@@ -57,6 +57,22 @@ const AppProvider = ({ children }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+  // track the window height
+  useEffect(() => {
+    const handleResize = () => setScreenHeight(window.innerHeight);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // scroll height track effect
+  const [scrollHeight, setScrollHeight] = useState(window.scrollY);
+  useEffect(() => {
+    const handleScroll = () => setScrollHeight(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const value = {
     theme,
     toggleTheme,
@@ -67,6 +83,8 @@ const AppProvider = ({ children }) => {
     openModal,
     closeModal,
     screenWidth,
+    screenHeight,
+    scrollHeight,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

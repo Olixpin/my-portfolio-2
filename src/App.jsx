@@ -1,4 +1,4 @@
-import { Header, Hero } from "./Layouts";
+import { Header, Hero, About, Resume } from "./Layouts";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = ({}) => {
@@ -6,7 +6,11 @@ const App = ({}) => {
     <Router>
       <Header />
       <Hero />
-      <Routes>{/* <Route path="/" element={<Home />} /> */}</Routes>
+      <About />
+      <Resume />
+      <Routes>
+        <Route path="/about" element={<About />} />
+      </Routes>
     </Router>
   );
 };

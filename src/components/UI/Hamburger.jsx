@@ -2,7 +2,7 @@ import React from "react";
 import { useGlobalContext } from "../../context/context";
 
 const Hamburger = ({ handleOpen, open }) => {
-  const { openModal, closeModal, isModalOpen, screenWidth } =
+  const { openModal, closeModal, isModalOpen, screenWidth, scrollHeight } =
     useGlobalContext();
 
   return (
@@ -14,24 +14,44 @@ const Hamburger = ({ handleOpen, open }) => {
           isModalOpen ? closeModal() : openModal();
         }}
       >
-        <div
-          className={`${
-            open
-              ? "rotate-45 transition-all"
-              : screenWidth > 800
-              ? "-mt-1.5 bg-white"
-              : "-mt-1.5"
-          } hamburger-line bg-primaryMain dark:bg-white z-[60] transition-all`}
-        ></div>
-        <div
-          className={`${
-            open
-              ? "-rotate-45 transition-all"
-              : screenWidth > 800
-              ? "mt-1.5 bg-white"
-              : "mt-1.5"
-          } hamburger-line bg-primaryMain dark:bg-white z-[60] transition-all`}
-        ></div>
+        {scrollHeight > 100 ? (
+          <div
+            className={`${
+              open ? "rotate-45 transition-all" : "-mt-1.5"
+            } hamburger-line bg-primaryMain dark:bg-white z-[60] transition-all`}
+          ></div>
+        ) : (
+          <div
+            className={`${
+              open
+                ? "rotate-45 transition-all"
+                : screenWidth > 800
+                ? "-mt-1.5 !bg-white"
+                : "-mt-1.5"
+            } hamburger-line bg-primaryMain dark:bg-white z-[60] transition-all`}
+          ></div>
+        )}
+        {scrollHeight > 100 ? (
+          <div
+            className={`${
+              open
+                ? "-rotate-45 transition-all"
+                : screenWidth > 800
+                ? "mt-1.5 bg-primaryMain"
+                : "mt-1.5"
+            } hamburger-line bg-primaryMain dark:bg-white z-[60] transition-all`}
+          ></div>
+        ) : (
+          <div
+            className={`${
+              open
+                ? "-rotate-45 transition-all"
+                : screenWidth > 800
+                ? "mt-1.5 !bg-white"
+                : "mt-1.5"
+            } hamburger-line bg-primaryMain dark:bg-white z-[60] transition-all`}
+          ></div>
+        )}
       </button>
     </div>
   );

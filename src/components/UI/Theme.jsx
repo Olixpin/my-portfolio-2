@@ -1,18 +1,37 @@
-import React, { useState } from "react";
+import React from "react";
 import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
 import { useGlobalContext } from "../../context/context";
 
 const Theme = ({ open }) => {
-  const { theme, toggleTheme, screenWidth, openModal } = useGlobalContext();
-  console.log(openModal);
-  console.log(open);
+  const { theme, toggleTheme, screenWidth, scrollHeight } = useGlobalContext();
 
   return (
-    <div className="cursor-pointer flex items-center justify-center">
-      {theme === "dark" ? (
-        <LightModeOutlined
-          onClick={toggleTheme}
-          className={`
+    <>
+      {scrollHeight > 100 ? (
+        <div className="cursor-pointer flex items-center justify-center">
+          {theme === "dark" ? (
+            <LightModeOutlined
+              onClick={toggleTheme}
+              className={`
+        ${
+          open
+            ? "text-primaryMain"
+            : screenWidth > 800
+            ? "text-primaryMain"
+            : "text-primaryMain"
+        }
+        `}
+            />
+          ) : (
+            <DarkModeOutlined onClick={toggleTheme} className="text-white" />
+          )}
+        </div>
+      ) : (
+        <div className="cursor-pointer flex items-center justify-center">
+          {theme === "dark" ? (
+            <LightModeOutlined
+              onClick={toggleTheme}
+              className={`
         ${
           open
             ? "text-primaryMain"
@@ -21,11 +40,13 @@ const Theme = ({ open }) => {
             : "text-primaryMain"
         }
         `}
-        />
-      ) : (
-        <DarkModeOutlined onClick={toggleTheme} className="text-white" />
+            />
+          ) : (
+            <DarkModeOutlined onClick={toggleTheme} className="text-white" />
+          )}
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

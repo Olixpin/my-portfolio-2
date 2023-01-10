@@ -1,0 +1,95 @@
+import {
+  CheckCircleOutline,
+  MilitaryTech,
+  SentimentSatisfied,
+} from "@mui/icons-material";
+
+import React from "react";
+import ComponentLayoutSize from "../components/UI/ComponentLayoutSize";
+import Button from "../components/UI/Button";
+import signature from "../assets/signature.png";
+import { useGlobalContext } from "../context/context";
+import Paras from "../components/UI/Paras";
+
+const Items = ({ Icon, text }) => {
+  const { screenWidth } = useGlobalContext();
+  return (
+    <div className="flex flex-col justify-end max-[800px]:justify-between text-right max-[800px]:text-left items-end max-[800px]:items-start gap-2">
+      <Icon
+        className="text-primaryMain"
+        style={{
+          fontSize: screenWidth > 425 ? 50 : 30,
+        }}
+      />
+      <p className="dark:text-background">{text}</p>
+    </div>
+  );
+};
+
+const About = () => {
+  return (
+    <section className="py-32 bg-white dark:bg-backgroundDark max-[800px]:py-16">
+      <ComponentLayoutSize>
+        <div className="flex flex-col  justify-center gap-5">
+          <h1 className="text-8xl font-medium max-[1028px]:text-7xl dark:text-grey100 max-[800px]:text-5xl max-[425px]:text-3xl">
+            About Me
+          </h1>
+          <div
+            id="wrapper"
+            className=" grid gap-16 px-32 max-[1033px]:px-0 py-5 max-[800px]:px-2 max-[800px]:flex flex-col "
+            style={{
+              gridTemplateColumns: "1fr 0fr 8fr",
+            }}
+          >
+            <div className="flex flex-col gap-12 max-[800px]:py-0 py-8 max-[800px]:grid max-[800px]:grid-cols-3">
+              <Items
+                Icon={CheckCircleOutline}
+                text={
+                  <span>
+                    Completed <br />
+                    Project
+                  </span>
+                }
+              />
+              <Items
+                Icon={SentimentSatisfied}
+                text={
+                  <span>
+                    Happy
+                    <br />
+                    Clients
+                  </span>
+                }
+              />
+              <Items
+                Icon={MilitaryTech}
+                text={
+                  <span>
+                    Project <br />
+                    Won
+                  </span>
+                }
+              />
+            </div>
+
+            <div className="middle bg-grey800 dark:bg-background w-[.5px] text-center max-[800px]:hidden">
+              &nbsp;
+            </div>
+            <div className="right py-8 flex flex-col gap-8 max-[800px]:-mt-8">
+              <Paras title="I am Noibi Abdulrasaq O. I'm probably not the typical designer positioned behind an Illustrator artboard adjusting pixels, but I design. Immersed in stylesheets tweaking font sizes and contemplating layouts is where you'll find me 🙃. I'm committed to creating fluent user experiences while staying fashionable." />
+              <Paras title="In building JavaScript applications, I'm equipped with just the right tools, and can absolutely function independently of them to deliver fast, resilient solutions optimized for scale — performance and scalabilty are priorities on my radar." />
+              <Button text="Contact Me" link="#" />
+              <img
+                src={signature}
+                alt="signature"
+                className="w-1/3 mix-blend-difference"
+              />
+            </div>
+          </div>
+        </div>
+      </ComponentLayoutSize>
+    </section>
+  );
+};
+
+export default About;
