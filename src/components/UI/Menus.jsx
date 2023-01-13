@@ -1,15 +1,18 @@
 import { KeyboardArrowDownOutlined } from "@mui/icons-material";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import menus from "./menu";
 import { motion } from "framer-motion";
+import { useGlobalContext } from "../../context/context";
 
 const Menus = () => {
-  const [pageToggle, setPageToggle] = React.useState(false);
+  const [pageToggle, setPageToggle] = useState(false);
 
   const handleToggle = () => {
     setPageToggle(!pageToggle);
   };
+
+  const { closeModal, open, setOpen, handleOpen } = useGlobalContext();
 
   console.log(menus[menus.length - 1].url);
   return (
@@ -20,8 +23,8 @@ const Menus = () => {
           return (
             <li key={id}>
               {url === menus[menus.length - 1].url ? (
-                <Link
-                  to={url}
+                <a
+                  href={`${url}`}
                   className="font-medium text-6xl max-[425px]:text-3xl  transition-all"
                   onClick={handleToggle}
                 >
@@ -69,14 +72,19 @@ const Menus = () => {
                       </>
                     )}
                   </motion.div>
-                </Link>
+                </a>
               ) : (
-                <Link
-                  to={url}
+                <a
+                  href={`${url}`}
                   className="font-medium text-6xl hover:text-primaryMain transition-all max-[425px]:text-3xl"
+                  onClick={() => {
+                    closeModal();
+                    setOpen(!open);
+                    handleOpen();
+                  }}
                 >
                   {title}
-                </Link>
+                </a>
               )}
             </li>
           );

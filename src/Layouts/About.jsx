@@ -28,7 +28,10 @@ const Items = ({ Icon, text }) => {
 
 const About = () => {
   return (
-    <section className="py-32 bg-white dark:bg-backgroundDark max-[800px]:py-16">
+    <section
+      id="about"
+      className="py-32 bg-white dark:bg-backgroundDark max-[800px]:py-16"
+    >
       <ComponentLayoutSize>
         <div className="flex flex-col  justify-center gap-5">
           <h1 className="text-8xl font-medium max-[1028px]:text-7xl dark:text-grey100 max-[800px]:text-5xl max-[425px]:text-3xl">

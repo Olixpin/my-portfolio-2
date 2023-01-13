@@ -10,14 +10,8 @@ import Menus from "../components/UI/Menus";
 import socialMedia from "../components/UI/socialMedia";
 
 const Header = () => {
-  const { theme, isModalOpen, screenHeight, scrollHeight, screenWidth } =
+  const { theme, isModalOpen, scrollHeight, open, setOpen, handleOpen } =
     useGlobalContext();
-  console.log(screenHeight, scrollHeight, screenWidth);
-
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => {
-    setOpen(!open);
-  };
 
   return (
     <header
@@ -28,7 +22,14 @@ const Header = () => {
       } transition-all duration-500 ease-in-out`}
     >
       <div className="py-5 flex justify-between items-center ">
-        <Link to="/">
+        <Link
+          to="/#home"
+          onClick={() => {
+            closeModal();
+            setOpen(!open);
+            handleOpen();
+          }}
+        >
           {theme === "dark" ? (
             <img
               src={logo}

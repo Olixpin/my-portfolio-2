@@ -3,11 +3,15 @@ import ReactDOM from "react-dom";
 import { useGlobalContext } from "../../context/context";
 
 const Backdrop = () => {
-  const { closeModal } = useGlobalContext();
+  const { closeModal, open, handleOpen, setOpen } = useGlobalContext();
   return (
     <div
       className="fixed w-full z-[50] h-screen bg-background dark:bg-backgroundDark top-0"
-      // onClick={closeModal}
+      onClick={() => {
+        handleOpen();
+        closeModal();
+        setOpen(!open);
+      }}
     />
   );
 };

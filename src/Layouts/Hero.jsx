@@ -4,6 +4,7 @@ import socialMedia from "../components/UI/socialMedia";
 const Hero = () => {
   return (
     <section
+      id="home"
       className="dark:bg-backgroundDark2 h-[70vh] max-[425px]:h-full -mt-[9vh] flex
    dark:text-white max-[800px]:flex-col max-[800px]:h-[100vh] max-[800px]:-mt-20"
     >

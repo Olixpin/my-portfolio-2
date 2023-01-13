@@ -13,13 +13,16 @@
     "@emotion/styled": "^11.10.5",
     "@formkit/auto-animate": "^1.0.0-beta.5",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-brands-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.3",
     "framer-motion": "^8.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.6.1"
+    "react-router-dom": "^6.6.1",
+    "vite-plugin-babel-macros": "^1.0.6"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

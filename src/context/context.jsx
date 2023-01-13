@@ -73,6 +73,11 @@ const AppProvider = ({ children }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(!open);
+  };
+
   const value = {
     theme,
     toggleTheme,
@@ -85,6 +90,9 @@ const AppProvider = ({ children }) => {
     screenWidth,
     screenHeight,
     scrollHeight,
+    open,
+    handleOpen,
+    setOpen,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
