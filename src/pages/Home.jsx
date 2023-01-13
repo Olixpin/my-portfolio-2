@@ -1,5 +1,5 @@
 import React from "react";
-import { Hero, About, Resume, Projects } from "../Layouts";
+import { Hero, About, Resume, Projects, BlogH, Client } from "../Layouts";
 
 const Home = () => {
   return (
@@ -8,6 +8,8 @@ const Home = () => {
       <About />
       <Resume />
       <Projects />
+      <BlogH />
+      <Client />
     </>
   );
 };

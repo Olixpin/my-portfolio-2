@@ -8,23 +8,8 @@ import React from "react";
 import ComponentLayoutSize from "../components/UI/ComponentLayoutSize";
 import Button from "../components/UI/Button";
 import signature from "../assets/signature.png";
-import { useGlobalContext } from "../context/context";
 import Paras from "../components/UI/Paras";
-
-const Items = ({ Icon, text }) => {
-  const { screenWidth } = useGlobalContext();
-  return (
-    <div className="flex flex-col justify-end max-[800px]:justify-between text-right max-[800px]:text-left items-end max-[800px]:items-start gap-2">
-      <Icon
-        className="text-primaryMain"
-        style={{
-          fontSize: screenWidth > 425 ? 50 : 30,
-        }}
-      />
-      <p className="dark:text-background">{text}</p>
-    </div>
-  );
-};
+import { IconAndText } from "../components/UI";
 
 const About = () => {
   return (
@@ -45,7 +30,7 @@ const About = () => {
             }}
           >
             <div className="flex flex-col gap-12 max-[800px]:py-0 py-8 max-[800px]:grid max-[800px]:grid-cols-3">
-              <Items
+              <IconAndText
                 Icon={CheckCircleOutline}
                 text={
                   <span>
@@ -54,7 +39,7 @@ const About = () => {
                   </span>
                 }
               />
-              <Items
+              <IconAndText
                 Icon={SentimentSatisfied}
                 text={
                   <span>
@@ -64,7 +49,7 @@ const About = () => {
                   </span>
                 }
               />
-              <Items
+              <IconAndText
                 Icon={MilitaryTech}
                 text={
                   <span>

@@ -5,6 +5,7 @@ import Paras from "../components/UI/Paras";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChrome } from "@fortawesome/free-brands-svg-icons";
 import { faAd, faGamepad, faPenNib } from "@fortawesome/free-solid-svg-icons";
+import { Button2 } from "../components/UI";
 
 const circles = (circleToFill) => {
   const generatedCircles = [];
@@ -114,9 +115,7 @@ const Service = ({ title, subTitle, icon }) => {
       </div>
       <h4 className="text-2xl font-medium dark:text-background">{title}</h4>
       <Paras title={subTitle} />
-      <a href="#" className="text-primaryMain font-bold">
-        Order now
-      </a>
+      <Button2 />
     </div>
   );
 };
