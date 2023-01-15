@@ -6,7 +6,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <section
-      id="portfolio"
+      id="footer"
       className="py-32 bg-white dark:bg-backgroundDark2 max-[800px]:py-16 "
     >
       <ComponentLayoutSize>
