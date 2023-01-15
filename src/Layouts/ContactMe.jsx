@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ComponentLayoutSize from "../components/UI/ComponentLayoutSize";
-import { Button, IconAndText } from "../components/UI";
+import { IconAndText } from "../components/UI";
 import { Mail, Phone } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
@@ -102,7 +102,7 @@ const ContactMe = () => {
 
   return (
     <section
-      id="portfolio"
+      id="contact"
       className="py-32 bg-white dark:bg-backgroundDark max-[800px]:py-16 "
     >
       <ToastContainer />
