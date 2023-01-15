@@ -1,5 +1,5 @@
 import React from "react";
-import socialMedia from "../components/UI/socialMedia";
+import { socials } from "../components/UI/SocialMedia";
 
 const Hero = () => {
   return (
@@ -25,7 +25,7 @@ const Hero = () => {
             solid and scalable frontend products with great user experiences.
           </p>
           <div id="social-media" className="flex gap-4">
-            {socialMedia.map((social) => {
+            {socials.map((social) => {
               const { id, icon, url } = social;
               return (
                 <a

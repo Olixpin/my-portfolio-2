@@ -7,7 +7,7 @@ import Theme from "../components/UI/Theme";
 import { useGlobalContext } from "../context/context";
 import Modal from "../components/UI/Modal";
 import Menus from "../components/UI/Menus";
-import socialMedia from "../components/UI/socialMedia";
+import { SocialMedia } from "../components/UI/SocialMedia";
 
 const Header = () => {
   const { theme, isModalOpen, scrollHeight, open, setOpen, handleOpen } =
@@ -59,20 +59,7 @@ const Header = () => {
             <code className="font-medium max-[425px]:hidden">
               Social Media:
             </code>
-            {socialMedia.map((social) => {
-              const { id, icon, url } = social;
-              return (
-                <a
-                  key={id}
-                  href={url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="transition-all hover:text-primaryMain text-xl"
-                >
-                  {icon}
-                </a>
-              );
-            })}
+            <SocialMedia />
           </div>
         </Modal>
       )}

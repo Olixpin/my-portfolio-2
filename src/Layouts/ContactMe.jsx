@@ -103,12 +103,12 @@ const ContactMe = () => {
   return (
     <section
       id="portfolio"
-      className="py-32 bg-white dark:bg-backgroundDark2 max-[800px]:py-16 "
+      className="py-32 bg-white dark:bg-backgroundDark max-[800px]:py-16 "
     >
       <ToastContainer />
       <ComponentLayoutSize>
         <div className="flex flex-col  justify-center ">
-          <h1 className="text-8xl font-medium max-[1028px]:text-7xl dark:text-grey100 max-[800px]:text-5xl max-[425px]:text-3xl">
+          <h1 className="text-8xl font-medium max-[1028px]:text-7xl dark:text-grey100 max-[800px]:text-5xl max-[425px]:text-3xl max-[800px]:mb-4">
             Contact Me
           </h1>
           <div
@@ -118,7 +118,7 @@ const ContactMe = () => {
               gridTemplateColumns: "1.7fr 0fr 9fr",
             }}
           >
-            <div className="flex flex-col gap-12 max-[800px]:py-0 py-8 max-[800px]:grid max-[800px]:grid-cols-3 max-[425px]:hidden">
+            <div className="flex flex-col gap-12 max-[800px]:py-0 py-8 max-[800px]:grid max-[800px]:grid-cols-2 max-[425px]:hidden text-xl">
               <IconAndText
                 Icon={Phone}
                 text={

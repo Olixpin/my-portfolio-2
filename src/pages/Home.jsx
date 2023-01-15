@@ -7,6 +7,7 @@ import {
   BlogH,
   Client,
   ContactMe,
+  Footer,
 } from "../Layouts";
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
       <BlogH />
       <Client />
       <ContactMe />
+      <Footer />
     </>
   );
 };
