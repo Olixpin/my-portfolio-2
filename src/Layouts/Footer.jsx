@@ -3,6 +3,7 @@ import ComponentLayoutSize from "../components/UI/ComponentLayoutSize";
 import { SocialMedia } from "../components/UI/SocialMedia";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <section
       id="portfolio"
@@ -17,7 +18,7 @@ const Footer = () => {
             <div id="social-media" className="flex gap-4">
               <SocialMedia />
             </div>
-            <p>© 2023 Olix. All Rights Reserved</p>
+            <p>© {year} Olix. All Rights Reserved.</p>
             <div id="developer">
               Developed by <b>Olix.</b>
             </div>
