@@ -6,5 +6,16 @@ import Resume from "./Resume";
 import Projects from "./Projects";
 import BlogH from "./BlogH";
 import Client from "./Client";
+import ContactMe from "./ContactMe";
 
-export { Footer, Header, Hero, About, Resume, Projects, BlogH, Client };
+export {
+  Footer,
+  Header,
+  Hero,
+  About,
+  Resume,
+  Projects,
+  BlogH,
+  Client,
+  ContactMe,
+};

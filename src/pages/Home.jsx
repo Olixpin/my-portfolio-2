@@ -1,5 +1,13 @@
 import React from "react";
-import { Hero, About, Resume, Projects, BlogH, Client } from "../Layouts";
+import {
+  Hero,
+  About,
+  Resume,
+  Projects,
+  BlogH,
+  Client,
+  ContactMe,
+} from "../Layouts";
 
 const Home = () => {
   return (
@@ -10,6 +18,7 @@ const Home = () => {
       <Projects />
       <BlogH />
       <Client />
+      <ContactMe />
     </>
   );
 };

@@ -32,7 +32,7 @@ const Client = () => {
               &nbsp;
             </div>
             <div className="right py-8 flex flex-col gap-16 ">
-              <Paras title="I write sometimes, about designs, frontend developments, Technical docs and life in general." />
+              <Paras title="Suspendisse potenti. Sed egestas eros eu libero posuere ultrices. Nullam ut aliquet felis, sit amet imperdiet felis." />
             </div>
           </div>
           <div
