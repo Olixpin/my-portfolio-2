@@ -3,7 +3,8 @@ import ComponentLayoutSize from "../components/UI/ComponentLayoutSize";
 import { Button, IconAndText } from "../components/UI";
 import { Mail, Phone } from "@mui/icons-material";
 import { motion } from "framer-motion";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactMe = () => {
   const [contactDetails, setContactDetails] = useState({
@@ -104,6 +105,7 @@ const ContactMe = () => {
       id="portfolio"
       className="py-32 bg-white dark:bg-backgroundDark2 max-[800px]:py-16 "
     >
+      <ToastContainer />
       <ComponentLayoutSize>
         <div className="flex flex-col  justify-center ">
           <h1 className="text-8xl font-medium max-[1028px]:text-7xl dark:text-grey100 max-[800px]:text-5xl max-[425px]:text-3xl">
