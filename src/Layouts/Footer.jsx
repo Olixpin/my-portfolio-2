@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
             <p>© 2023 Olix. All Rights Reserved</p>
             <div id="developer">
-              Developed by <b>Olix</b>
+              Developed by <b>Olix.</b>
             </div>
           </div>
         </div>
