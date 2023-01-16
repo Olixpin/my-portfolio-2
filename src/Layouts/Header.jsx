@@ -3,7 +3,13 @@ import logo from "../assets/olixpin.svg";
 import logoWhite from "../assets/olixpin-white.svg";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context/context";
-import { SocialMedia, Menus, Modal, Hamburger, Theme } from "../components/UI";
+import {
+  Menus,
+  Modal,
+  Hamburger,
+  Theme,
+  SocialMediaIcons,
+} from "../components/UI";
 
 const Header = () => {
   const { theme, isModalOpen, scrollHeight, open, setOpen, handleOpen } =
@@ -55,7 +61,7 @@ const Header = () => {
             <code className="font-medium max-[425px]:hidden">
               Social Media:
             </code>
-            <SocialMedia />
+            <SocialMediaIcons />
           </div>
         </Modal>
       )}

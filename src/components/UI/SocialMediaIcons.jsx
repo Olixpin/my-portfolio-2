@@ -1,7 +1,7 @@
-import React from "react";
 import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
+import React from "react";
 
-const SocialMedia = () => {
+const SocialMediaIcons = () => {
   const socials = [
     {
       id: 4,
@@ -18,12 +18,11 @@ const SocialMedia = () => {
     {
       id: 6,
       icon: <GitHub />,
-      url: "https://www.instagram.com/olixpin/",
+      url: "https://www.github.com/olixpin/",
     },
   ];
-
   return (
-    <>
+    <div>
       {socials.map((social) => {
         const { id, icon, url } = social;
         return (
@@ -32,14 +31,14 @@ const SocialMedia = () => {
             href={url}
             target="_blank"
             rel="noreferrer"
-            className="transition-all hover:text-primaryMain text-xl"
+            className="transition-all hover:text-primaryMain text-xl text-grey200"
           >
             {icon}
           </a>
         );
       })}
-    </>
+    </div>
   );
 };
 
-export default SocialMedia;
+export default SocialMediaIcons;
