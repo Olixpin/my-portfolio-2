@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import logo from "../assets/olixpin.svg";
 import logoWhite from "../assets/olixpin-white.svg";
 import { Link } from "react-router-dom";
@@ -12,8 +12,20 @@ import {
 } from "../components/UI";
 
 const Header = () => {
-  const { theme, isModalOpen, scrollHeight, open, setOpen, handleOpen } =
-    useGlobalContext();
+  const {
+    theme,
+    isModalOpen,
+    scrollHeight,
+    open,
+    handleOpen,
+    scrollTo,
+    scrollToTop,
+  } = useGlobalContext();
+
+  const elementRef = useRef(null);
+  function handleScroll() {
+    scrollTo(elementRef);
+  }
 
   return (
     <header
@@ -23,17 +35,15 @@ const Header = () => {
           : "bg-transparent"
       } transition-all duration-500 ease-in-out`}
     >
-      <div className="py-5 flex justify-between items-center ">
-        <Link
-          to="/#home"
-          onClick={() => {
-            closeModal();
-            setOpen(!open);
-            handleOpen();
-          }}
-        >
+      {" "}
+      <div
+        className="py-5 flex justify-between items-center "
+        onClick={scrollToTop}
+      >
+        <Link to="/">
           {theme === "dark" ? (
             <img
+              id="home"
               src={logo}
               alt="
                 Olixpin"
@@ -48,7 +58,6 @@ const Header = () => {
           <Hamburger open={open} handleOpen={handleOpen} />
         </div>
       </div>
-
       {isModalOpen && (
         <Modal>
           <div className="p-5 rounded-md flex flex-col items-start">

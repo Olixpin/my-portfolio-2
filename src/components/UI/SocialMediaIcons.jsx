@@ -22,7 +22,7 @@ const SocialMediaIcons = () => {
     },
   ];
   return (
-    <div>
+    <div className="flex gap-5">
       {socials.map((social) => {
         const { id, icon, url } = social;
         return (

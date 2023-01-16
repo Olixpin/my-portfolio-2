@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, useRef } from "react";
 
 const AppContext = createContext();
 
@@ -78,6 +78,14 @@ const AppProvider = ({ children }) => {
     setOpen(!open);
   };
 
+  function scrollTo(ref) {
+    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   const value = {
     theme,
     toggleTheme,
@@ -93,6 +101,8 @@ const AppProvider = ({ children }) => {
     open,
     handleOpen,
     setOpen,
+    scrollTo,
+    scrollToTop,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
