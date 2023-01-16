@@ -2,12 +2,8 @@ import React, { useState } from "react";
 import logo from "../assets/olixpin.svg";
 import logoWhite from "../assets/olixpin-white.svg";
 import { Link } from "react-router-dom";
-import Hamburger from "../components/UI/Hamburger";
-import Theme from "../components/UI/Theme";
 import { useGlobalContext } from "../context/context";
-import Modal from "../components/UI/Modal";
-import Menus from "../components/UI/Menus";
-import SocialMedia from "../components/UI/SocialMedia";
+import { SocialMedia, Menus, Modal, Hamburger, Theme } from "../components/UI";
 
 const Header = () => {
   const { theme, isModalOpen, scrollHeight, open, setOpen, handleOpen } =

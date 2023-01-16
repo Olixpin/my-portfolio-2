@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ComponentLayoutSize from "../components/UI/ComponentLayoutSize";
-import { IconAndText } from "../components/UI";
+import { IconAndText, ComponentLayoutSize } from "../components/UI";
 import { Mail, Phone } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
