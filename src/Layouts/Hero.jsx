@@ -1,7 +1,27 @@
+import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
 import React from "react";
-import { socials } from "../components/UI/SocialMedia";
 
 const Hero = () => {
+  const socialMedias = [
+    {
+      id: 1,
+      icon: <Twitter />,
+      url: "https://twitter.com/olixpin",
+    },
+
+    {
+      id: 2,
+      icon: <LinkedIn />,
+      url: "https://www.linkedin.com/company/olixpin",
+    },
+
+    {
+      id: 3,
+      icon: <GitHub />,
+      url: "https://www.instagram.com/olixpin/",
+    },
+  ];
+
   return (
     <section
       id="home"
@@ -25,7 +45,7 @@ const Hero = () => {
             solid and scalable frontend products with great user experiences.
           </p>
           <div id="social-media" className="flex gap-4">
-            {socials.map((social) => {
+            {socialMedias.map((social) => {
               const { id, icon, url } = social;
               return (
                 <a

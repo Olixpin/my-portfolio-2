@@ -7,6 +7,7 @@ import Menus from "./Menus";
 import Modal from "./Modal";
 import Theme from "./Theme";
 import Button2 from "./Button2";
+import SocialMedia from "./SocialMedia";
 
 export {
   IconAndText,
@@ -18,4 +19,5 @@ export {
   Modal,
   Theme,
   Button2,
+  SocialMedia,
 };

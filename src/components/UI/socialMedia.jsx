@@ -3,19 +3,19 @@ import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
 
 const socials = [
   {
-    id: 2,
+    id: 1,
     icon: <Twitter />,
     url: "https://twitter.com/olixpin",
   },
 
   {
-    id: 3,
+    id: 2,
     icon: <LinkedIn />,
     url: "https://www.linkedin.com/company/olixpin",
   },
 
   {
-    id: 4,
+    id: 3,
     icon: <GitHub />,
     url: "https://www.instagram.com/olixpin/",
   },
@@ -42,4 +42,4 @@ const SocialMedia = () => {
   );
 };
 
-export { SocialMedia, socials}
+export default SocialMedia;

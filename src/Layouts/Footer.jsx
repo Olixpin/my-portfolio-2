@@ -1,13 +1,13 @@
 import React from "react";
 import ComponentLayoutSize from "../components/UI/ComponentLayoutSize";
-import { SocialMedia } from "../components/UI/SocialMedia";
+import SocialMedia from "../components/UI/SocialMedia";
 
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <section
       id="footer"
-      className="py-32 bg-white dark:bg-backgroundDark2 max-[800px]:py-16 "
+      className="py-32 bg-background dark:bg-backgroundDark2 max-[800px]:py-16 "
     >
       <ComponentLayoutSize>
         <div className="flex flex-col  justify-center ">
