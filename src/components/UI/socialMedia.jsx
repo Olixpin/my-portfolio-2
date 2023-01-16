@@ -1,27 +1,27 @@
 import React from "react";
 import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
 
-const socials = [
-  {
-    id: 1,
-    icon: <Twitter />,
-    url: "https://twitter.com/olixpin",
-  },
-
-  {
-    id: 2,
-    icon: <LinkedIn />,
-    url: "https://www.linkedin.com/company/olixpin",
-  },
-
-  {
-    id: 3,
-    icon: <GitHub />,
-    url: "https://www.instagram.com/olixpin/",
-  },
-];
-
 const SocialMedia = () => {
+  const socials = [
+    {
+      id: 1,
+      icon: <Twitter />,
+      url: "https://twitter.com/olixpin",
+    },
+
+    {
+      id: 2,
+      icon: <LinkedIn />,
+      url: "https://www.linkedin.com/company/olixpin",
+    },
+
+    {
+      id: 3,
+      icon: <GitHub />,
+      url: "https://www.instagram.com/olixpin/",
+    },
+  ];
+
   return (
     <>
       {socials.map((social) => {
