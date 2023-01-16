@@ -1,4 +1,3 @@
-import Footer from "./Footer";
 import Header from "./Header";
 import Hero from "./Hero";
 import About from "./About";
@@ -7,9 +6,9 @@ import Projects from "./Projects";
 import BlogH from "./BlogH";
 import Client from "./Client";
 import ContactMe from "./ContactMe";
+import Footer from "./Footer";
 
 export {
-  Footer,
   Header,
   Hero,
   About,
@@ -18,4 +17,5 @@ export {
   BlogH,
   Client,
   ContactMe,
+  Footer,
 };

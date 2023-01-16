@@ -1,6 +1,5 @@
 import React from "react";
-import ComponentLayoutSize from "../components/UI/ComponentLayoutSize";
-import { SocialMedia } from "../components/UI";
+import { ComponentLayoutSize, SocialMedia } from "../components/UI";
 
 const Footer = () => {
   const year = new Date().getFullYear();

@@ -2,7 +2,7 @@ import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
 import React from "react";
 
 const Hero = () => {
-  const socialMedias = [
+  const socials2 = [
     {
       id: 1,
       icon: <Twitter />,
@@ -45,7 +45,7 @@ const Hero = () => {
             solid and scalable frontend products with great user experiences.
           </p>
           <div id="social-media" className="flex gap-4">
-            {socialMedias.map((social) => {
+            {socials2.map((social) => {
               const { id, icon, url } = social;
               return (
                 <a
