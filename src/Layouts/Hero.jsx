@@ -1,4 +1,4 @@
-import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
+import { GitHub, LinkedIn, Twitter, Instagram } from "@mui/icons-material";
 import React from "react";
 
 const Hero = () => {
