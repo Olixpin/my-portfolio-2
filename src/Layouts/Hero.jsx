@@ -68,11 +68,11 @@ const Hero = () => {
           className="border border-grey100 absolute max-[800px]:static w-96 h-96 -left-[188px] bottom-32 flex items-center justify-center max-[1041px]:h-72 max-[1041px]:w-72 max-[1041px]:-left-[150px] max-[1041px]:bottom-40 max-[425px]:w-full !max-[425px]:p-0"
         >
           <div className="w-[22rem] h-[22rem] max-[1041px]:h-72 max-[1041px]:w-full max-[425px]:w-full">
-            <img
+            {/* <img
               src="https://images.unsplash.com/photo-1672843164650-b39a24c549a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
               alt="profile"
               className="w-full h-full object-cover "
-            />
+            /> */}
           </div>
         </div>
       </div>
