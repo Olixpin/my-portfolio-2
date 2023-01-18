@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 
 const Projects = () => {
   const links = [
-    { id: "UI UX Design", imageUrl: UIUX, title: "Gooir" },
+    { id: "UI UX Design", imageUrl: UIUX, title: "Goir" },
     { id: "Photography", imageUrl: Photography, title: "Mozar" },
-    { id: "Development", imageUrl: Development, title: "Stay Fit" },
+    { id: "Development", imageUrl: Development, title: "Explore" },
     { id: "Branding", imageUrl: Branding2, title: "Zorro" },
   ];
 
@@ -90,7 +90,7 @@ const Projects = () => {
           {!allProjects && (
             <div id="project-cont" className="">
               <Link
-                to={`/project/${links[index]?.title}`}
+                to={`/portfolio/${links[index]?.title}`}
                 id="service-1"
                 className="grid grid-cols-2 max-[637px]:grid-cols-1"
               >
@@ -124,8 +124,8 @@ const Projects = () => {
             className={`${allProjects ? "flex flex-col gap-16" : "hidden"}`}
           >
             {links.map(({ id, imageUrl, title }) => (
-              <a
-                href="#"
+              <Link
+                to={`/portfolio/${title}`}
                 id="service-1"
                 className="grid grid-cols-2 max-[637px]:grid-cols-1"
                 key={id}
@@ -159,7 +159,7 @@ const Projects = () => {
                     <p>{id}</p>
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
