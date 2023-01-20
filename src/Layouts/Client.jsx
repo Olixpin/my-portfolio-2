@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ComponentLayoutSize from "../components/UI/ComponentLayoutSize";
 import { IconAndText, Button, Paras, Button2 } from "../components/UI";
-import blogData from "../components/UI/blogData";
 import brand0 from "../assets/brand1.png";
 import brand1 from "../assets/brand2.png";
 import brand2 from "../assets/brand3.png";
@@ -12,15 +11,14 @@ const Client = () => {
   return (
     <section
       id="portfolio"
-      className="py-32 bg-background dark:bg-backgroundDark2 max-[800px]:py-16 "
+      className="py-32 bg-white dark:bg-backgroundDark max-[800px]:py-16 "
     >
       <ComponentLayoutSize>
         <div className="flex flex-col  justify-center ">
-          <h1 className="text-8xl font-medium max-[1028px]:text-7xl dark:text-grey100 max-[800px]:text-5xl max-[425px]:text-3xl">
+          <h1 className="text-6xl font-medium max-[1028px]:text-5xl dark:text-grey100 max-[425px]:text-3xl">
             My Clients
           </h1>
           <div
-            id="wrapper"
             className=" grid gap-16 px-16 max-[1033px]:px-0 py-5 max-[800px]:px-0 max-[800px]:flex flex-col max-[800px]:gap-0 max-[800px]:py-0"
             style={{
               gridTemplateColumns: "1fr 0fr 8fr",

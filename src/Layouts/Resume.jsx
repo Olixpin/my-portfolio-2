@@ -4,8 +4,13 @@ import Button from "../components/UI/Button";
 import Paras from "../components/UI/Paras";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChrome } from "@fortawesome/free-brands-svg-icons";
-import { faAd, faGamepad, faPenNib } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAd,
+  faPenNib,
+  faBezierCurve,
+} from "@fortawesome/free-solid-svg-icons";
 import { Button2 } from "../components/UI";
+import uiid from "../utils/uiid";
 
 const circles = (circleToFill) => {
   const generatedCircles = [];
@@ -15,7 +20,7 @@ const circles = (circleToFill) => {
         key={i}
         className={`${
           i < circleToFill ? "bg-primaryMain" : "bg-grey100 dark:bg-grey200"
-        } w-[12px] h-[12px] rounded-full max-[425px]:w-[10px] max-[425px]:h-[10px]`}
+        } w-[12px] h-[12px] rounded-full max-[425px]:w-[8px] max-[425px]:h-[8px]`}
       />
     );
   }
@@ -28,7 +33,7 @@ const SkillSet = ({ skillTitle, circles, rating }) => {
       <h5 className="text-xl dark:text-background font-black flex-[0.3]  max-[619px]:flex-[0.2] max-[619px]:text-sm">
         {skillTitle}
       </h5>
-      <div className="flex gap-5 max-[619px]:gap-3 max-[425px]:gap-[10px] flex-[0.6]  text-center ">
+      <div className="flex gap-5 max-[619px]:gap-2 max-[425px]:gap-[10.5px] flex-[0.6]  text-center ">
         {circles}
       </div>
       <p className="text-sm dark:text-background font-bold flex-[0.1]">
@@ -39,8 +44,8 @@ const SkillSet = ({ skillTitle, circles, rating }) => {
 };
 
 const userSkills = [
-  { id: 1, skillTitle: "HTML", circles: circles(8), rating: "80%" },
-  { id: 2, skillTitle: "CSS", circles: circles(7), rating: "70%" },
+  { id: 1, skillTitle: "HTML", circles: circles(9), rating: "90%" },
+  { id: 2, skillTitle: "CSS", circles: circles(8), rating: "80%" },
   {
     id: 3,
     skillTitle: "Javascript",
@@ -48,9 +53,10 @@ const userSkills = [
     rating: "60%",
   },
   { id: 4, skillTitle: "React", circles: circles(6), rating: "60%" },
-  { id: 5, skillTitle: "Node", circles: circles(4), rating: "40%" },
+  { id: 5, skillTitle: "Node", circles: circles(5), rating: "50%" },
   { id: 6, skillTitle: "Photoshop", circles: circles(9), rating: "90%" },
   { id: 7, skillTitle: "Wordpress", circles: circles(8), rating: "80%" },
+  { id: 8, skillTitle: "Figma", circles: circles(7), rating: "70%" },
 ];
 
 const SkillList = () => {
@@ -81,23 +87,22 @@ const services = [
     id: 2,
     title: "Branding",
     subTitle:
-      "Get a new logo, business card, letterhead, and social media kit designs.",
+      "Create a new business card, letterhead, birthday and social media kit designs.",
     icon: faPenNib,
   },
 
   {
     id: 3,
-    title: "Game Development",
+    title: "Logo Identity",
     subTitle:
-      "Developing memorable and unique mobile android, ios and video games.",
-    icon: faGamepad,
+      "Create any kind of logo, like a lettermark, wordmark, combination mark, or mascot.",
+    icon: faBezierCurve,
   },
 
   {
     id: 4,
-    title: "Advertising",
-    subTitle:
-      "Get your business in front of the right people at the right time.",
+    title: "Training and Development",
+    subTitle: "Teach people how to code and build real-world projects.",
     icon: faAd,
   },
 ];
@@ -145,16 +150,15 @@ const Resume = () => {
   return (
     <section
       id="resume"
-      className="py-32 bg-background dark:bg-backgroundDark2 max-[800px]:py-16 "
+      className="py-32 bg-background dark:bg-backgroundDark2 max-[800px]:py-16"
     >
       <ComponentLayoutSize>
         <div className="flex flex-col  justify-center gap-5">
-          <h1 className="text-8xl font-medium max-[1028px]:text-7xl dark:text-grey100 max-[800px]:text-5xl max-[425px]:text-3xl">
+          <h1 className="text-6xl font-medium max-[1028px]:text-4xl dark:text-grey100 max-[425px]:text-3xl">
             My Resume
           </h1>
           <div
-            id="wrapper"
-            className=" grid gap-16 px-32 max-[1033px]:px-0 py-5 max-[800px]:px-2 max-[800px]:flex flex-col "
+            className=" grid gap-16 px-8 max-[1033px]:px-0 py-5 max-[800px]:px-2 max-[800px]:flex flex-col "
             style={{
               gridTemplateColumns: "1fr 0fr 8fr",
             }}
@@ -165,7 +169,7 @@ const Resume = () => {
               &nbsp;
             </div>
             <div className="right py-8 flex flex-col gap-16 max-[800px]:-mt-8">
-              <Paras title="Talented UX designer with 7+ years of experience, seeking to elevate UI/UX at ABC, Inc. As Lead UI/UX Head completed project before dead line. ittis augue, id sollicitudin justo tristique ut. Nullam ex enim, euismod vel bibendum ultrices, fringilla vel eros. Donec euism od leo um, at pellentesque velituis a congue sem." />
+              <Paras title="I am a highly motivated and skilled developer with 2 years of experience in the industry. Throughout my career, I have gained experience in several programming languages such as HTML, CSS, React, Nodejs, and JavaScript. I have also worked on various projects, both individually and as part of a team, and have developed a strong understanding of software development methodologies. I possess excellent problem-solving and debugging skills, and I always strive to improve my skills and knowledge. I am excited to bring my talents to this field and help create high-quality and innovative software solutions." />
 
               <div id="skills" className="flex flex-col gap-8">
                 <h5 className="text-4xl font-medium dark:text-background">
@@ -190,27 +194,22 @@ const Resume = () => {
                     Education
                   </h5>
                   <History
-                    date="2010 - 2012"
-                    certificate="Master in Graphic"
-                    institute="New York University"
+                    date="2021 to present"
+                    certificate="Mathematics & CS"
+                    institute="University of Lagos"
                   />
                   <History
-                    date="2006 - 2009"
-                    certificate="Bachelors of FineArt"
-                    institute="New York University"
+                    date="2016 - 2018"
+                    certificate="ND, Computer Engineering"
+                    institute="Yaba College of Technology"
                   />
                   <h5 className="text-4xl font-medium dark:text-background">
                     Awards
                   </h5>
                   <History
-                    date="2016 - awwwards"
-                    certificate="Site of the Day"
-                    summary="Euismod vel bibendum ultrices, fringilla vel eros, donec euismod leo lectus."
-                  />
-                  <History
-                    date="2016 - awwwards"
-                    certificate="Site of the Day"
-                    summary="Euismod vel bibendum ultrices, fringilla vel eros, donec euismod leo lectus."
+                    date="2022 - awwwards"
+                    certificate="Altschool Hackathon Winner"
+                    summary="Altschool Africa"
                   />
                 </div>
                 <div
@@ -221,26 +220,19 @@ const Resume = () => {
                     Experience
                   </h5>
                   <History
-                    date="2014 - Present"
-                    certificate="Soft Tech Inc."
-                    institute="UI Head &amp; Manager"
-                    summary="Euismod vel bibendum ultrices, fringilla vel eros, donec euismod leo lectus."
+                    date="2018 - 2019"
+                    certificate="Internship"
+                    institute="Norak Technologies Limited"
                   />
                   <History
-                    date="2010 - 2014"
-                    certificate="Kana Design Studio"
-                    institute="UI / UX Specialist"
-                    summary="Euismod vel bibendum ultrices, fringilla vel eros, donec euismod leo lectus."
-                  />
-                  <History
-                    date="2009 - 2010"
-                    certificate="Paperart"
-                    institute="Graphic Designer"
-                    summary="Euismod vel bibendum ultrices, fringilla vel eros, donec euismod leo lectus."
+                    date="2019 - 2021"
+                    certificate="Graphic Designer"
+                    institute="Kokribranders"
+                    summary="Design and develop websites with wordpress, logos, and other graphic materials."
                   />
                 </div>
               </div>
-              <Button text="Download CV" link="#" />
+              <Button text="Download CV" link="https://tinyurl.com/2uu5bp4u" />
             </div>
           </div>
         </div>

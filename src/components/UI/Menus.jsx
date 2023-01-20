@@ -25,7 +25,7 @@ const Menus = () => {
               {url === menus[menus.length - 1].url ? (
                 <a
                   href={`${url}`}
-                  className="font-medium text-6xl max-[425px]:text-3xl  transition-all"
+                  className="font-medium text-5xl max-[425px]:text-3xl  transition-all"
                   onClick={handleToggle}
                 >
                   {" "}
@@ -76,7 +76,7 @@ const Menus = () => {
               ) : (
                 <a
                   href={`${url}`}
-                  className="font-medium text-6xl hover:text-primaryMain transition-all max-[425px]:text-3xl"
+                  className="font-medium text-5xl hover:text-primaryMain transition-all max-[425px]:text-3xl"
                   onClick={() => {
                     closeModal();
                     setOpen(!open);

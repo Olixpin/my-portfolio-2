@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import ComponentLayoutSize from "../components/UI/ComponentLayoutSize";
 import Paras from "../components/UI/Paras";
 import Branding2 from "../assets/branding.jpg";
-import UIUX from "../assets/ui-ux-design.jpg";
-import Photography from "../assets/photography.jpg";
-import Development from "../assets/development.jpg";
+import YabatechMFB from "../assets/yfb.jpg";
+import Moluxury from "../assets/moluxury.jpg";
+import County from "../assets/county.jpg";
 import { Search } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Projects = () => {
   const links = [
-    { id: "UI UX Design", imageUrl: UIUX, title: "Goir" },
-    { id: "Photography", imageUrl: Photography, title: "Mozar" },
-    { id: "Development", imageUrl: Development, title: "Explore" },
+    { id: "Development", imageUrl: County, title: "County" },
+    { id: "UI UX Design", imageUrl: YabatechMFB, title: "Yabatech MFB" },
+    { id: "Logo", imageUrl: Moluxury, title: "Moluxury Chic" },
     { id: "Branding", imageUrl: Branding2, title: "Zorro" },
   ];
 
@@ -26,13 +27,12 @@ const Projects = () => {
       className="py-32 bg-white dark:bg-backgroundDark max-[800px]:py-16 "
     >
       <ComponentLayoutSize>
-        <div className="flex flex-col  justify-center gap-5">
-          <h1 className="text-8xl font-medium max-[1028px]:text-7xl dark:text-grey100 max-[800px]:text-5xl max-[425px]:text-3xl">
+        <div className="flex flex-col justify-center gap-5">
+          <h1 className="text-6xl font-medium dark:text-grey100  max-[425px]:text-3xl">
             My Projects
           </h1>
           <div
-            id="wrapper"
-            className=" grid gap-16 px-32 max-[1033px]:px-0 py-5 max-[800px]:px-2 max-[800px]:flex flex-col "
+            className=" grid gap-16 max-[800px]:gap-2 px-8 max-[1033px]:px-0 py-5 max-[800px]:px-2 max-[800px]:flex flex-col max-[800px]:mb-0"
             style={{
               gridTemplateColumns: "1fr 0fr 8fr",
             }}
@@ -47,8 +47,7 @@ const Projects = () => {
             </div>
           </div>
           <div
-            id="wrapper"
-            className=" grid gap-[3.2rem] px-32 max-[1033px]:px-0 py-5 max-[800px]:px-2 max-[800px]:flex flex-col"
+            className=" grid gap-[3.2rem] max-[800px]:gap-2 px-32 max-[1033px]:px-0 py-5 max-[800px]:px-2 max-[800px]:flex flex-col max-[800px]:mb-0 max-[800px]:-mt-8"
             style={{
               gridTemplateColumns: "1fr 8fr",
             }}
@@ -89,34 +88,36 @@ const Projects = () => {
           </div>
           {!allProjects && (
             <div id="project-cont" className="">
-              <Link
-                to={`/portfolio/${links[index]?.title}`}
-                id="service-1"
-                className="grid grid-cols-2 max-[637px]:grid-cols-1"
-              >
-                <div id={links[index]?.title} className="pro-con">
-                  <img
-                    src={links[index]?.imageUrl}
-                    alt={links[index]?.title}
-                    className="hovver"
-                  />
-                  <Search
-                    id="searchIcon"
-                    className="text-background absolute top-8 right-8 z-10 searchIcon"
-                  />
-                </div>
-                <div
-                  id="text"
-                  className="bg-textWhite flex items-center px-24 max-[952px]:px-8"
+              <ScrollToTop>
+                <Link
+                  to={`/portfolio/${links[index]?.title}`}
+                  id=""
+                  className="grid grid-cols-2 max-[637px]:grid-cols-1"
                 >
-                  <div className="flex flex-col gap-16 max-[637px]:gap-4 max-[637px]:py-8">
-                    <h1 className="text-8xl max-[952px]:text-7xl max-[637px]:text-5xl">
-                      {links[index]?.title}
-                    </h1>
-                    <p>{links[index]?.id}</p>
+                  <div className="pro-con">
+                    <img
+                      src={links[index]?.imageUrl}
+                      alt={links[index]?.title}
+                      className="hovver"
+                    />
+                    <Search
+                      id="searchIcon"
+                      className="text-background absolute top-8 right-8 z-10 searchIcon"
+                    />
                   </div>
-                </div>
-              </Link>
+                  <div
+                    id="text"
+                    className="bg-textWhite flex items-center px-24 max-[952px]:px-8"
+                  >
+                    <div className="flex flex-col gap-16 max-[637px]:gap-4 max-[637px]:py-8">
+                      <h1 className="text-7xl max-[952px]:text-6xl max-[637px]:text-5xl">
+                        {links[index]?.title}
+                      </h1>
+                      <p>{links[index]?.id}</p>
+                    </div>
+                  </div>
+                </Link>
+              </ScrollToTop>
             </div>
           )}
           <div
@@ -124,43 +125,55 @@ const Projects = () => {
             className={`${allProjects ? "flex flex-col gap-16" : "hidden"}`}
           >
             {links.map(({ id, imageUrl, title }) => (
-              <Link
-                to={`/portfolio/${title}`}
-                id="service-1"
-                className="grid grid-cols-2 max-[637px]:grid-cols-1"
-                key={id}
-              >
-                <div
-                  id="img"
-                  className={`${hoverImageId === id ? "pro-con" : ""} relative`}
-                  onMouseEnter={() => {
-                    setHoverImageId(id);
-                  }}
+              <ScrollToTop>
+                <Link
+                  to={`/portfolio/${title}`}
+                  id=""
+                  className="grid grid-cols-2 max-[637px]:grid-cols-1"
+                  key={id}
                 >
-                  <img src={imageUrl} alt={title} />
-                  {hoverImageId === id ? (
-                    <Search
-                      id="searchIcon"
-                      className="text-background absolute top-8 right-8 z-10 searchIcon"
-                    />
-                  ) : (
-                    ""
-                  )}
-                  {id === "Photography" && <span id="allLast"></span>}
-                </div>
-                <div
-                  id="text"
-                  className="bg-textWhite flex items-center px-24 max-[952px]:px-8"
-                >
-                  <div className="flex flex-col gap-16 max-[637px]:gap-4 max-[637px]:py-8">
-                    <h1 className="text-8xl max-[952px]:text-7xl max-[637px]:text-5xl">
-                      {title}
-                    </h1>
-                    <p>{id}</p>
+                  <div
+                    id="img"
+                    className={`${
+                      hoverImageId === id ? "pro-con" : ""
+                    } relative`}
+                    onMouseEnter={() => {
+                      setHoverImageId(id);
+                    }}
+                  >
+                    <img src={imageUrl} alt={title} />
+                    {hoverImageId === id ? (
+                      <Search
+                        id="searchIcon"
+                        className="text-background absolute top-8 right-8 z-10 searchIcon"
+                      />
+                    ) : (
+                      ""
+                    )}
+                    {id === "Photography" && <span id="allLast"></span>}
                   </div>
-                </div>
-              </Link>
+                  <div
+                    id="text"
+                    className="bg-textWhite flex items-center px-24 max-[952px]:px-8"
+                  >
+                    <div className="flex flex-col gap-16 max-[637px]:gap-4 max-[637px]:py-8">
+                      <h1 className="text-6xl max-[952px]:text-5xl max-[637px]:text-3xl">
+                        {title}
+                      </h1>
+                      <p>{id}</p>
+                    </div>
+                  </div>
+                </Link>
+              </ScrollToTop>
             ))}
+            <div className="text-center">
+              <Link
+                to="/portfolio"
+                className={`dark:text-white text-md font-medium px-16 py-3 rounded-md border border-primaryMain hover:bg-primaryDark w-max hover:text-white`}
+              >
+                View All Projects
+              </Link>
+            </div>
           </div>
         </div>
       </ComponentLayoutSize>

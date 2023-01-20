@@ -107,17 +107,16 @@ const ContactMe = () => {
       <ToastContainer />
       <ComponentLayoutSize>
         <div className="flex flex-col  justify-center ">
-          <h1 className="text-8xl font-medium max-[1028px]:text-7xl dark:text-grey100 max-[800px]:text-5xl max-[425px]:text-3xl max-[800px]:mb-4">
+          <h1 className="text-6xl font-medium max-[1028px]:text-5xl dark:text-grey100  max-[425px]:text-3xl max-[800px]:mb-4">
             Contact Me
           </h1>
           <div
-            id="wrapper"
             className=" grid gap-16 px-16 max-[1033px]:px-0 py-5 pl-0 max-[800px]:px-0 max-[800px]:flex flex-col max-[800px]:gap-0 max-[800px]:py-0"
             style={{
               gridTemplateColumns: "1.7fr 0fr 9fr",
             }}
           >
-            <div className="flex flex-col gap-12 max-[800px]:py-0 py-8 max-[800px]:grid max-[800px]:grid-cols-2 max-[425px]:hidden text-xl">
+            <div className="flex flex-col gap-12 max-[800px]:py-0 py-8 max-[800px]:grid max-[800px]:grid-cols-2  max-text-xl max-[700px]:grid-cols-1 max-[700px]:gap-4">
               <IconAndText
                 Icon={Phone}
                 text={
@@ -133,7 +132,7 @@ const ContactMe = () => {
                     href="mailto:noibiabdulrasaq@gmail.com"
                     className="font-bold text-xl"
                   >
-                    noibi@gmail.com
+                    noibiabdulrasaq@gmail.com
                   </a>
                 }
               />
@@ -210,12 +209,6 @@ const ContactMe = () => {
                 >
                   {loading ? "Sending..." : submitted ? "Sent ✅" : "Submit"}
                 </motion.button>
-                {/* {submitted && (
-                  <p className="text-primaryMain px-4 py-2 bg-white border border-grey100 w-max">
-                    Message sent successfully
-                  </p>
-                )}
-                {error && <p className="text-errorMain">Message not sent</p>} */}
               </form>
             </div>
           </div>

@@ -16,11 +16,11 @@ const menus = [
     url: "/#portfolio",
   },
 
-  {
-    id: 5,
-    title: "Pricing",
-    url: "/#pricing",
-  },
+  // {
+  //   id: 5,
+  //   title: "Pricing",
+  //   url: "/#pricing",
+  // },
 
   {
     id: 6,

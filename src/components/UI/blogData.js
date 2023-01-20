@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     title: "Markdown Formatting Demo",
-    category: "travel",
+    category: "Travel",
     date: "September 13, 2020",
     image: "https://picsum.photos/200/300",
     subtitle:

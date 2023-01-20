@@ -9,7 +9,7 @@ const IconAndText = ({ Icon, text, title }) => {
         <Icon
           className="text-primaryMain"
           style={{
-            fontSize: screenWidth > 425 ? 50 : 20,
+            fontSize: screenWidth > 425 ? 32 : 20,
           }}
         />
       )}

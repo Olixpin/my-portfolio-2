@@ -37,7 +37,7 @@ const Header2 = () => {
     >
       {" "}
       <div
-        className="py-5 flex justify-between items-center "
+        className="py-2 flex justify-between items-center "
         onClick={scrollToTop}
       >
         <Link to="/">

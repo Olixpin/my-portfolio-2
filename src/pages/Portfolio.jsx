@@ -26,11 +26,10 @@ const Portfolio = () => {
       <section className="py-32 bg-white dark:bg-backgroundDark max-[800px]:py-16 -mt-[8.6vh]">
         <ComponentLayoutSize>
           <div className="flex flex-col  justify-center gap-5 py-16">
-            <h1 className="text-8xl font-medium max-[1028px]:text-7xl dark:text-grey100 max-[800px]:text-5xl max-[425px]:text-3xl">
+            <h1 className="text-6xl font-medium dark:text-grey100 max-[800px]:text-5xl max-[425px]:text-3xl">
               My Projects
             </h1>
             <div
-              id="wrapper"
               className=" grid gap-16 px-32 max-[1033px]:px-0 py-5 max-[800px]:px-2 max-[800px]:flex flex-col "
               style={{
                 gridTemplateColumns: "1fr 0fr 8fr",
@@ -46,7 +45,6 @@ const Portfolio = () => {
               </div>
             </div>
             <div
-              id="wrapper"
               className=" grid gap-[3.2rem] px-32 max-[1033px]:px-0 py-5 max-[800px]:px-2 max-[800px]:flex flex-col"
               style={{
                 gridTemplateColumns: "1fr 8fr",
@@ -98,7 +96,6 @@ const Portfolio = () => {
                 <div id="project-cont" className="">
                   <Link
                     to={`/portfolio/${title}`}
-                    id="service-1"
                     className="grid grid-cols-2 max-[637px]:grid-cols-1"
                     key={id}
                   >
@@ -114,7 +111,7 @@ const Portfolio = () => {
                       className="bg-textWhite flex items-center px-24 max-[952px]:px-8"
                     >
                       <div className="flex flex-col gap-16 max-[637px]:gap-4 max-[637px]:py-8">
-                        <h1 className="text-8xl max-[952px]:text-7xl max-[637px]:text-5xl">
+                        <h1 className="text-6xl max-[637px]:text-4xl">
                           {title}
                         </h1>
                         <p>{category}</p>
@@ -131,7 +128,6 @@ const Portfolio = () => {
               {projectData.map(({ id, image, title, category }) => (
                 <Link
                   to={`/portfolio/${title}`}
-                  id="service-1"
                   className="grid grid-cols-2 max-[637px]:grid-cols-1"
                   key={id}
                 >
@@ -160,7 +156,7 @@ const Portfolio = () => {
                     className="bg-textWhite flex items-center px-24 max-[952px]:px-8"
                   >
                     <div className="flex flex-col gap-16 max-[637px]:gap-4 max-[637px]:py-8">
-                      <h1 className="text-7xl max-[952px]:text-6xl max-[637px]:text-5xl">
+                      <h1 className="text-6xl  max-[637px]:text-4xl">
                         {title}
                       </h1>
                       <p>{category}</p>

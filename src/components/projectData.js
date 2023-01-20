@@ -1,95 +1,108 @@
 import Branding2 from "../assets/branding.jpg";
-import UIUX from "../assets/ui-ux-design.jpg";
-import Photography from "../assets/photography.jpg";
-import Development from "../assets/development.jpg";
-import UIUX1 from "../assets/ui-ux-img-1.jpg";
-import UIUX2 from "../assets/ui-ux-img-2.jpg";
+import YabatechMFB from "../assets/yfb.jpg";
+import YabatechMFB1 from "../assets/yfb1.jpg";
+import YabatechMFB2 from "../assets/yfb2.jpg";
+import Moluxury from "../assets/moluxury.jpg";
+import Moluxury1 from "../assets/moluxury1.jpg";
+import Moluxury2 from "../assets/moluxury2.jpg";
+import BLW from "../assets/blw.jpg";
+import BLW1 from "../assets/blw1.jpg";
+import BLW2 from "../assets/blw2.jpg";
+import County from "../assets/county.jpg";
+import County1 from "../assets/county1.jpg";
+import County2 from "../assets/county2.jpg";
+import Coverly from "../assets/coverly.jpg";
+import Coverly1 from "../assets/coverly1.jpg";
+import Coverly2 from "../assets/coverly2.jpg";
 
 const projectData = [
   {
     id: 1,
     category: "Development",
     description: "development projects",
-    title: "Explore",
-    technology: ["HTML", "CSS", "React"],
+    title: "County",
+    technology: ["HTML,", "CSS,", "React"],
     taskGoal:
-      "Aliquam a sapien diam. Phasellus pulvinar tellus aliquam eleifend consectetur. Sed bibendum leo quis rutrum aliquetmorbi.Donec imperdiet risus at tortor consequat maximus et eget magna. Cras ornare sagittis augue, id sollicitudin justo tristique ut. Nullam ex enim, euismod vel bibendum ultrices, fringilla vel eros. Donec euismod leo lectus, et euismod metus euismod sed. Quisque quis suscipit ipsum, at pellentesque velit. Duis a congue sem.",
+      "The goal of the site is to provide a platform that will generate link for different kinds of event. Not just that, the site will also provide a platform for people to register for the event and also pay for the event.",
     taskResult:
-      "Aliquam a sapien diam. Phasellus pulvinar tellus aliquam eleifend consectetur. Sed bibendum leo quis rutrum aliquetmorbi.Donec imperdiet risus at tortor consequat maximus et eget magna. Cras ornare sagittis augue, id sollicitudin justo tristique ut. Nullam ex enim, euismod vel bibendum ultrices, fringilla vel eros. Donec euismod leo lectus, et euismod metus euismod sed. Quisque quis suscipit ipsum, at pellentesque velit. Duis a congue sem.",
+      "I was able to achieve the goal of the site. The site is able to generate link for different kinds of event. Not just that, the site is also able to provide a platform for people to register for the event and also pay for the event.",
     video: "https://www.youtube.com/embed/1w8ZgX9rXwM",
-    image: Development,
-    year: "2020",
-    otherImages: [UIUX1, UIUX2],
+    image: County,
+    year: "2022",
+    otherImages: [County1, County2],
+    link: "https://county-hng.netlify.app/",
   },
 
   {
     id: 2,
     category: "Development",
     description: "development projects",
-    title: "Kara",
-    technology: ["React Native", "Flutter"],
+    title: "Coverly",
+    technology: ["HTML,", "CSS,", "Tailwind,", "React"],
     taskGoal:
-      "Aliquam a sapien diam. Phasellus pulvinar tellus aliquam eleifend consectetur. Sed bibendum leo quis rutrum aliquetmorbi.Donec imperdiet risus at tortor consequat maximus et eget magna. Cras ornare sagittis augue, id sollicitudin justo tristique ut. Nullam ex enim, euismod vel bibendum ultrices, fringilla vel eros. Donec euismod leo lectus, et euismod metus euismod sed. Quisque quis suscipit ipsum, at pellentesque velit. Duis a congue sem.",
+      "To help job seekers to generate cover letters for any position. Applying for different jobs with different cover letters can be tasking, which is why we are here to help job seekers generate outstanding Cover letters for any position.",
     taskResult:
-      "Aliquam a sapien diam. Phasellus pulvinar tellus aliquam eleifend consectetur. Sed bibendum leo quis rutrum aliquetmorbi.Donec imperdiet risus at tortor consequat maximus et eget magna. Cras ornare sagittis augue, id sollicitudin justo tristique ut. Nullam ex enim, euismod vel bibendum ultrices, fringilla vel eros. Donec euismod leo lectus, et euismod metus euismod sed. Quisque quis suscipit ipsum, at pellentesque velit. Duis a congue sem.",
+      "This is a group project. My roles are building the feature page, event page and every functionality required and finally consume some api and as well added the logout functionality.",
     video: "https://www.youtube.com/embed/1w8ZgX9rXwM",
-    image: Development,
-    year: "2020",
-    otherImages: [UIUX1, UIUX2],
+    image: Coverly,
+    year: "2023",
+    otherImages: [Coverly1, Coverly2],
+    link: "https://coverly.hng.tech/",
   },
 
   {
     id: 3,
-    category: "UI UX Design",
-    description: "UI/UX Projects",
-    title: "Goir",
-    technology: ["Figma,", "Adobe-XD"],
+    category: "Development",
+    description: "development projects",
+    title: "Wellingborough",
+    technology: ["Wordpress"],
     taskGoal:
-      "Aliquam a sapien diam. Phasellus pulvinar tellus aliquam eleifend consectetur. Sed bibendum leo quis rutrum aliquetmorbi.Donec imperdiet risus at tortor consequat maximus et eget magna. Cras ornare sagittis augue, id sollicitudin justo tristique ut. Nullam ex enim, euismod vel bibendum ultrices, fringilla vel eros. Donec euismod leo lectus, et euismod metus euismod sed. Quisque quis suscipit ipsum, at pellentesque velit. Duis a congue sem.",
+      "To build a website for a church in Wellingborough, Northamptonshire, UK. The website will be used to share information about the church, its activities, and events.",
     taskResult:
-      "Aliquam a sapien diam. Phasellus pulvinar tellus aliquam eleifend consectetur. Sed bibendum leo quis rutrum aliquetmorbi.Donec imperdiet risus at tortor consequat maximus et eget magna. Cras ornare sagittis augue, id sollicitudin justo tristique ut. Nullam ex enim, euismod vel bibendum ultrices, fringilla vel eros. Donec euismod leo lectus, et euismod metus euismod sed. Quisque quis suscipit ipsum, at pellentesque velit. Duis a congue sem.",
+      "I was able to build a website for a church in Wellingborough, Northamptonshire, UK. The website is used to share information about the church, its activities, and events.",
     video: "https://www.youtube.com/embed/1w8ZgX9rXwM",
-    image: UIUX,
-    year: "2020",
-    otherImages: [UIUX1, UIUX2],
+    image: BLW,
+    year: "2022",
+    otherImages: [BLW1, BLW2],
+    link: "https://blwwellingborough.org.uk/",
   },
 
   {
     id: 4,
     category: "UI UX Design",
     description: "UI/UX Projects",
-    title: "Kokri",
-    technology: ["Figma,", "Framer"],
+    title: "Yabatech MFB",
+    technology: ["Figma"],
     taskGoal:
       "Aliquam a sapien diam. Phasellus pulvinar tellus aliquam eleifend consectetur. Sed bibendum leo quis rutrum aliquetmorbi.Donec imperdiet risus at tortor consequat maximus et eget magna. Cras ornare sagittis augue, id sollicitudin justo tristique ut. Nullam ex enim, euismod vel bibendum ultrices, fringilla vel eros. Donec euismod leo lectus, et euismod metus euismod sed. Quisque quis suscipit ipsum, at pellentesque velit. Duis a congue sem.",
     taskResult:
       "Aliquam a sapien diam. Phasellus pulvinar tellus aliquam eleifend consectetur. Sed bibendum leo quis rutrum aliquetmorbi.Donec imperdiet risus at tortor consequat maximus et eget magna. Cras ornare sagittis augue, id sollicitudin justo tristique ut. Nullam ex enim, euismod vel bibendum ultrices, fringilla vel eros. Donec euismod leo lectus, et euismod metus euismod sed. Quisque quis suscipit ipsum, at pellentesque velit. Duis a congue sem.",
     video: "https://www.youtube.com/embed/1w8ZgX9rXwM",
-    image: UIUX,
+    image: YabatechMFB,
     year: "2020",
-    otherImages: [UIUX1, UIUX2],
+    otherImages: [YabatechMFB1, YabatechMFB2],
+    link: "https://www.figma.com/file/1411LmvQpV6ybkWuy44WzI/Form-Collection?node-id=0%3A1&t=KRERyyKLEqxqtvH3-1",
   },
 
   {
     id: 5,
-    category: "Photography",
-    description: "Photography Projects",
-
-    title: "Kana",
-    technology: ["Figma,", "Adobe XD"],
+    category: "Logo",
+    description: "Logo Projects",
+    title: "Moluxury Chic",
+    technology: ["Coreldraw"],
     taskGoal:
       "Aliquam a sapien diam. Phasellus pulvinar tellus aliquam eleifend consectetur. Sed bibendum leo quis rutrum aliquetmorbi.Donec imperdiet risus at tortor consequat maximus et eget magna. Cras ornare sagittis augue, id sollicitudin justo tristique ut. Nullam ex enim, euismod vel bibendum ultrices, fringilla vel eros. Donec euismod leo lectus, et euismod metus euismod sed. Quisque quis suscipit ipsum, at pellentesque velit. Duis a congue sem.",
     taskResult:
       "Aliquam a sapien diam. Phasellus pulvinar tellus aliquam eleifend consectetur. Sed bibendum leo quis rutrum aliquetmorbi.Donec imperdiet risus at tortor consequat maximus et eget magna. Cras ornare sagittis augue, id sollicitudin justo tristique ut. Nullam ex enim, euismod vel bibendum ultrices, fringilla vel eros. Donec euismod leo lectus, et euismod metus euismod sed. Quisque quis suscipit ipsum, at pellentesque velit. Duis a congue sem.",
     video: "https://www.youtube.com/embed/1w8ZgX9rXwM",
-    image: Photography,
+    image: Moluxury,
     year: "2020",
-    otherImages: [UIUX1, UIUX2],
+    otherImages: [Moluxury1, Moluxury2],
   },
 
   {
     id: 6,
-    category: "Photography",
+    category: "Logo",
     description: "Photography Projects",
     title: "Mozar",
     technology: ["Figma,", "Framer"],
@@ -98,9 +111,9 @@ const projectData = [
     taskResult:
       "Aliquam a sapien diam. Phasellus pulvinar tellus aliquam eleifend consectetur. Sed bibendum leo quis rutrum aliquetmorbi.Donec imperdiet risus at tortor consequat maximus et eget magna. Cras ornare sagittis augue, id sollicitudin justo tristique ut. Nullam ex enim, euismod vel bibendum ultrices, fringilla vel eros. Donec euismod leo lectus, et euismod metus euismod sed. Quisque quis suscipit ipsum, at pellentesque velit. Duis a congue sem.",
     video: "https://www.youtube.com/embed/1w8ZgX9rXwM",
-    image: Photography,
+    image: Moluxury,
     year: "2020",
-    otherImages: [UIUX1, UIUX2],
+    otherImages: [Moluxury, Moluxury],
   },
 
   {
@@ -117,15 +130,15 @@ const projectData = [
     video: "https://www.youtube.com/embed/1w8ZgX9rXwM",
     image: Branding2,
     year: "2020",
-    otherImages: [UIUX1, UIUX2],
+    otherImages: [Branding2, Branding2],
   },
 
   {
     id: 8,
-    category: "Branding,",
+    category: "Branding",
     description: "Branding Projects",
     title: "Burger",
-    technology: ["Photoshop", "Coreldraw"],
+    technology: ["Photoshop,", "Coreldraw"],
     taskGoal:
       "Aliquam a sapien diam. Phasellus pulvinar tellus aliquam eleifend consectetur. Sed bibendum leo quis rutrum aliquetmorbi.Donec imperdiet risus at tortor consequat maximus et eget magna. Cras ornare sagittis augue, id sollicitudin justo tristique ut. Nullam ex enim, euismod vel bibendum ultrices, fringilla vel eros. Donec euismod leo lectus, et euismod metus euismod sed. Quisque quis suscipit ipsum, at pellentesque velit. Duis a congue sem.",
     taskResult:
@@ -133,7 +146,7 @@ const projectData = [
     video: "https://www.youtube.com/embed/1w8ZgX9rXwM",
     image: Branding2,
     year: "2020",
-    otherImages: [UIUX1, UIUX2],
+    otherImages: [Branding2, Branding2],
   },
 ];
 

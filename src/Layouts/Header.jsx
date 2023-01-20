@@ -36,11 +36,8 @@ const Header = () => {
       } transition-all duration-500 ease-in-out`}
     >
       {" "}
-      <div
-        className="py-5 flex justify-between items-center "
-        onClick={scrollToTop}
-      >
-        <Link to="/">
+      <div className="py-2 flex justify-between items-center ">
+        <Link to="/" onClick={scrollToTop}>
           {theme === "dark" ? (
             <img
               id="home"

@@ -5,10 +5,10 @@ import {
   Resume,
   Projects,
   BlogH,
-  Client,
   ContactMe,
   Header,
 } from "../Layouts";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Home = () => {
   return (
@@ -19,7 +19,6 @@ const Home = () => {
       <Resume />
       <Projects />
       <BlogH />
-      <Client />
       <ContactMe />
     </>
   );

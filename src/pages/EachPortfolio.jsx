@@ -18,6 +18,7 @@ const EachPortfolio = () => {
     otherImages,
     taskResult,
     video,
+    link,
   } = project;
 
   return (
@@ -26,11 +27,10 @@ const EachPortfolio = () => {
       <section className="py-32 bg-white dark:bg-backgroundDark max-[800px]:py-16 -mt-[8.8vh]">
         <ComponentLayoutSize>
           <div className="flex flex-col  justify-center gap-5 py-16">
-            <h1 className="text-8xl font-medium max-[1028px]:text-7xl dark:text-grey100 max-[800px]:text-5xl max-[425px]:text-3xl">
+            <h1 className="text-6xl font-medium dark:text-grey100 max-[800px]:text-5xl max-[425px]:text-3xl">
               {project.title}
             </h1>
             <div
-              id="wrapper"
               className=" grid gap-16 px-32 max-[1033px]:px-0 py-5 max-[800px]:px-2 max-[800px]:flex flex-col "
               style={{
                 gridTemplateColumns: "1fr 0fr 8fr",
@@ -49,10 +49,11 @@ const EachPortfolio = () => {
                   </div>
                   <div id="technology">
                     <Paras title="Technology" />
+
                     <h4 className="text-xl">
-                      {technology.map((tech) => {
-                        return tech + " ";
-                      })}
+                      {technology.map((tech) => (
+                        <span key={tech}> {tech}</span>
+                      ))}
                     </h4>
                   </div>
                   <div id="project-title">
@@ -63,22 +64,10 @@ const EachPortfolio = () => {
                 </div>
               </div>
             </div>
-            {/* <div
-              id="wrapper"
-              className=" grid gap-[3.2rem] px-32 max-[1033px]:px-0 py-5 max-[800px]:px-2 max-[800px]:flex flex-col"
-            >
-              <div className="flex flex-col gap-12 max-[800px]:py-0 py-8 max-[800px]:grid max-[800px]:grid-cols-2 max-[425px]:hidden ">
-                <p>Hello</p>
-              </div>
-
-              <div className="right py-8 flex flex-col gap-16 max-[800px]:-mt-8 max-[637px]:py-0 ">
-                Hello
-              </div>
-            </div> */}
           </div>
         </ComponentLayoutSize>
         <div
-          className="wrapper eachImage h-[800px] bg-cover bg-center bg-no-repeat bg-fixed bg-opacity-50 dark:bg-opacity-100"
+          className="wrapper eachImage h-[800px] bg-cover bg-center bg-no-repeat bg-fixed bg-opacity-50 dark:bg-opacity-100 max-[425px]:hidden"
           style={{
             backgroundImage: `url(${image})`,
           }}
@@ -86,7 +75,7 @@ const EachPortfolio = () => {
           &nbsp;
         </div>
         <ComponentLayoutSize>
-          <div className="flex flex-col justify-center gap-5 py-16 dark:text-background">
+          <div className="flex flex-col justify-center gap-5 py-16 dark:text-background max-[425px]:-mt-32">
             <h4 className="text-3xl">Project Goal:</h4>
             <Paras title={taskGoal} />
             <div
@@ -95,7 +84,12 @@ const EachPortfolio = () => {
             >
               <div className="left-imgs flex flex-col gap-8 mb-16 max-[800px]:mb-0">
                 {otherImages.map((image) => (
-                  <div className="eachImage">
+                  <a
+                    href={link}
+                    target="_blank"
+                    className="eachImage"
+                    key={image}
+                  >
                     <img
                       src={image}
                       alt={image}
@@ -104,18 +98,21 @@ const EachPortfolio = () => {
                       cursor-pointer
                     "
                     />
-                  </div>
+                  </a>
                 ))}
               </div>
               <div className="right-img max-[500px]:mb-16">
-                <img
-                  src={image}
-                  alt={image}
-                  className="
+                <a href={link} target="_blank">
+                  {" "}
+                  <img
+                    src={image}
+                    alt={image}
+                    className="
                       hover:scale-[.95] transition duration-500 ease-in-out
                       cursor-pointer
                     "
-                />
+                  />
+                </a>
               </div>
             </div>
             <h4 className="text-3xl">Project Result:</h4>
@@ -129,11 +126,11 @@ const EachPortfolio = () => {
                 // move to next project
                 projectData.map((project, index) => {
                   if (project.title === title) {
-                    if (index === projectData.length - 1) {
-                      window.location.href = `/portfolio/${projectData[0].title}`;
+                    if (index === projectData?.length - 1) {
+                      window.location.href = `/portfolio/${projectData[0]?.title}`;
                     } else {
                       window.location.href = `/portfolio/${
-                        projectData[index + 1].title
+                        projectData[index + 1]?.title
                       }`;
                     }
                   }
