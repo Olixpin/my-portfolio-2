@@ -167,12 +167,14 @@ const Projects = () => {
               </ScrollToTop>
             ))}
             <div className="text-center">
-              <Link
-                to="/portfolio"
-                className={`dark:text-white text-md font-medium px-16 py-3 rounded-md border border-primaryMain hover:bg-primaryDark w-max hover:text-white`}
-              >
-                View All Projects
-              </Link>
+              <ScrollToTop>
+                <Link
+                  to="/portfolio"
+                  className={`dark:text-white text-md font-medium px-16 py-3 rounded-md border border-primaryMain hover:bg-primaryDark w-max hover:text-white`}
+                >
+                  View All Projects
+                </Link>
+              </ScrollToTop>
             </div>
           </div>
         </div>
