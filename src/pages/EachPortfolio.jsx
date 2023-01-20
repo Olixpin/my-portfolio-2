@@ -123,10 +123,28 @@ const EachPortfolio = () => {
             <button
               className={`dark:text-white text-md font-medium px-16 py-3 rounded-md border border-primaryMain hover:bg-primaryDark w-max hover:text-white transition duration-500 ease-in-out`}
               onClick={() => {
-                window.history.back();
+                projectData.map((project, index) => {
+                  if (project.title === title) {
+                    if (index === projectData?.length - 1) {
+                      window.location.href = `/portfolio/${projectData[0]?.title}`;
+                    } else {
+                      window.location.href = `/portfolio/${
+                        projectData[index + 1]?.title
+                      }`;
+                    }
+                  }
+                });
               }}
             >
-              Back to Portfolio
+              {projectData.map((project, index) => {
+                if (project.title === title) {
+                  if (index === projectData.length - 1) {
+                    return "Previous Project";
+                  } else {
+                    return "Next Project";
+                  }
+                }
+              })}
             </button>
           </div>
         </ComponentLayoutSize>
