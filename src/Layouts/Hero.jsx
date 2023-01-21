@@ -7,7 +7,7 @@ import {
 } from "@mui/icons-material";
 import { calcLength } from "framer-motion";
 import React from "react";
-import ProfileImg from "../assets/olix.png";
+import ProfileImg from "../assets/olixpin.jpg";
 
 const Hero = () => {
   const socials2 = [

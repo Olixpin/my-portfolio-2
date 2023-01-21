@@ -171,12 +171,12 @@ const Resume = () => {
             <div className="right py-8 flex flex-col gap-16 max-[800px]:-mt-8">
               <Paras title="I am a highly motivated and skilled developer with 2 years of experience in the industry. Throughout my career, I have gained experience in several programming languages such as HTML, CSS, React, Nodejs, and JavaScript. I have also worked on various projects, both individually and as part of a team, and have developed a strong understanding of software development methodologies. I possess excellent problem-solving and debugging skills, and I always strive to improve my skills and knowledge. I am excited to bring my talents to this field and help create high-quality and innovative software solutions." />
 
-              <div id="skills" className="flex flex-col gap-8">
+              {/* <div id="skills" className="flex flex-col gap-8">
                 <h5 className="text-4xl font-medium dark:text-background">
                   Skills
                 </h5>
                 <SkillList />
-              </div>
+              </div> */}
 
               <div id="services" className="flex flex-col gap-8">
                 <h5 className="text-4xl font-medium dark:text-background">
